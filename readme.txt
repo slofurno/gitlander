@@ -1,7 +1,7 @@
 1.) first make your ssh key and copy the public key to where youd like to work
 
 2.) run the gitlander alpha client to register your account
-./gitlander.sh register <username> <public key>
+./gitlander.sh register <username> <location of your public key>
 ./gitlander.sh register slofurno mygit.pub
 
 3.) make an entry in your ssh config with the username you picked, and the location of your private key
