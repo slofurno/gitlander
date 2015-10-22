@@ -1,0 +1,5 @@
+echo "adding user $1"
+useradd -m -p glowstone1 -s /usr/bin/git-shell "$1"
+mkdir /home/$1/.ssh
+echo "$2" > /home/$1/.ssh/authorized_keys
+chown -R $1:$1 /home/$1

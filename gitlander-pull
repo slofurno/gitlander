@@ -1,0 +1,7 @@
+pulldir="/root/gitlander"
+
+for tevs in `echo $1 | tr ":" "\n"`; do
+    pulldir="$pulldir/$tevs"
+done
+
+$(cd $pulldir && git pull > /dev/null 2>&1)

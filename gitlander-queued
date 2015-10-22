@@ -1,0 +1,8 @@
+pipe=/home/postqueue
+
+while true
+do
+    if read line <$pipe; then
+        ./gitlander-pull $line
+    fi
+done

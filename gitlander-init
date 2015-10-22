@@ -1,0 +1,6 @@
+echo "making repo $2 for user $1"
+git init /home/$1/$2.git --bare
+echo "echo $1:$2 >/home/postqueue" > /home/$1/$2.git/hooks/post-update
+chmod 700 /home/$1/$2.git/hooks/post-update
+chown -R $1:$1 "/home/$1/$2.git"
+$(git clone /home/$1/$2.git /root/gitlander/$1/$2)
