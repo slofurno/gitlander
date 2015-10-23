@@ -8,7 +8,7 @@
     
   ```
   ./gitlander.sh register <username> <~/path/to/ssh/key.pub>
-  eg ./gitlander.sh register slofurno ~/.ssh/mygit.pub
+  ./gitlander.sh register slofurno ~/.ssh/mygit.pub
   ```
 
 3. make an entry in your ssh config with the username you picked, and the location of your private key
@@ -24,14 +24,14 @@
 
   ```
   ./gitlander.sh init <your username> <your repo name>
-  eg ./gitlander.sh init slofurno finaltest
+  ./gitlander.sh init slofurno finaltest
   ```
 
 5. clone your repo locally
 
   ```
   git clone <username>@gitlander:<repo>.git
-  eg git clone slofurno@gitlander:finaltest.git
+  git clone slofurno@gitlander:finaltest.git
   ```
 
 6. add something and make your first commit
