@@ -1,0 +1,5 @@
+added to sshd config
+
+PasswordAuthentication no
+Match User root
+PasswordAuthentication yes
