@@ -11,7 +11,7 @@ ssh-keygen -t rsa -C "your_email@example.com"
 use the gitlander alpha client to register your account
     
 ```
-./gitlander.sh register <username> <~/path/to/ssh/key.pub>
+./gitlander.sh register <username> <public key>
 ./gitlander.sh register slofurno ~/.ssh/mygit.pub
 ```
 
@@ -24,20 +24,26 @@ User slofurno
 IdentityFile ~/.ssh/mygit
 ```
 
-now that your account is setup, you can init as many bare repos as you want
+now that your account is setup, you can create as many repos as you want
 
 ```
-./gitlander.sh init <your username> <your repo name>
+./gitlander.sh init <username> <repo name>
 ./gitlander.sh init slofurno finaltest
 ```
 
-clone your repo locally
+Push or clone your new repo over ssh
 
 ```
-git clone <username>@gitlander:<repo>.git
-git clone slofurno@gitlander:finaltest.git
+git remote add origin gitlander:finaltest.git
+git push -u origin master
+
+git clone gitlander:finaltest.git
 ```
 
-add something and make your first commit
+Publicly clone over http
 
-view your repo on gitlander.com
+```
+git clone http://gitlander.com/slofurno/finaltest.git
+```
+
+view the contents of your repo on gitlander.com
