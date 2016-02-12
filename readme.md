@@ -1,21 +1,26 @@
 ## Usage
 
-clone this repo or download a copy of gitlander.sh
+Download the gitlander cli
 
-find an existing ssh key or generate a new one. 
+```
+curl -L https://raw.githubusercontent.com/slofurno/gitlander/master/gitlander.sh -O
+chmod +x gitlander.sh
+```
+
+Find an existing ssh key or generate a new one. 
 
 ```
 ssh-keygen -t rsa -C "your_email@example.com"
 ```
 
-use the gitlander alpha client to register your account
+Create an account with your public key
     
 ```
 ./gitlander.sh register <username> <public key>
 ./gitlander.sh register slofurno ~/.ssh/mygit.pub
 ```
 
-make an entry in your ssh config with the username you picked, and the location of your private key
+Add gitlander to your ssh config with your username and private key 
 
 ```
 Host gitlander
@@ -24,7 +29,7 @@ User slofurno
 IdentityFile ~/.ssh/mygit
 ```
 
-now that your account is setup, you can create as many repos as you want
+Create your first gitlander repo 
 
 ```
 ./gitlander.sh init <username> <repo name>
@@ -46,4 +51,4 @@ Publicly clone over http
 git clone http://gitlander.com/slofurno/finaltest.git
 ```
 
-view the contents of your repo on gitlander.com
+View the contents of your repo on gitlander.com
