@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo "adding user $1"
 useradd -m -p glowstone1 -s /usr/bin/git-shell "$1"
 mkdir /home/$1/.ssh

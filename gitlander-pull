@@ -1,3 +1,5 @@
+#!/bin/sh
+
 pulldir="/root/gitlander"
 
 for tevs in `echo $1 | tr ":" "\n"`; do
