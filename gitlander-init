@@ -1,9 +1,9 @@
 #!/bin/sh
 
 echo "making repo $2 for user $1"
-git init /home/$1/$2.git --bare
-echo "echo $1:$2 >/home/postqueue" > /home/$1/$2.git/hooks/post-update
-echo "exec git update-server-info" >> /home/$1/$2.git/hooks/post-update
-chmod 700 /home/$1/$2.git/hooks/post-update
-chown -R $1:$1 "/home/$1/$2.git"
-$(git clone /home/$1/$2.git /root/gitlander/$1/$2)
+git init /home/$1/$2 --bare
+echo "echo $1:$2 >/home/postqueue" > /home/$1/$2/hooks/post-update
+echo "exec git update-server-info" >> /home/$1/$2/hooks/post-update
+chmod 700 /home/$1/$2/hooks/post-update
+chown -R $1:$1 "/home/$1/$2"
+$(git clone /home/$1/$2 /root/gitlander/$1/$2)
