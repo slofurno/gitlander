@@ -39,16 +39,16 @@ Create your first gitlander repo
 Push or clone your new repo over ssh
 
 ```
-git remote add origin gitlander:finaltest.git
+git remote add origin gitlander:finaltest
 git push -u origin master
 
-git clone gitlander:finaltest.git
+git clone gitlander:finaltest
 ```
 
 Publicly clone over http
 
 ```
-git clone http://gitlander.com/slofurno/finaltest.git
+git clone http://gitlander.com/slofurno/finaltest
 ```
 
 View the contents of your repo on gitlander.com
